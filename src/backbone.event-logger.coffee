@@ -1,4 +1,4 @@
-((root, fuctory)->
+((root, factory)->
   if typeof exports is 'object' and root.require
     module.exports = factory require("underscore"), require("backbone")
   else if typeof define is 'function' and define.amd
@@ -37,7 +37,7 @@
       else if prefix isnt true
         @__debugEvents.prefix = prefix or ""
       if "log" of @__debugEvents
-        # イベント登録済チェック(二重登録防止)
+        # Check events were registered
         if "_events" of @ and "all" of @_events
           exists = _.some @_events.all
           , (item) ->
@@ -50,25 +50,27 @@
         , background: labelColors[parts]
 
         css =
-          timestamp: _.map(logStyles.timestamp
-            ,
-              (val, key) ->
-                key + ":" + val
-            ).join(";")
-            label: _.map(labelCss
-            , 
-              (val, key) ->
-                key + ":" + val
+          timestamp: _.map(
+            logStyles.timestamp
+          ,
+            (val, key)-> key + ":" + val
           ).join(";")
-          event: _.map(logStyles.event
-            , 
-              (val, key) ->
-                key + ":" + val
+
+          label: _.map(
+            labelCss
+          , 
+            (val, key)-> key + ":" + val
+          ).join(";")
+
+          event: _.map(
+            logStyles.event
+          , 
+            (val, key)-> key + ":" + val
           ).join(";")
 
         @__debugEvents.log = (eventName) ->
           labelName = parts
-          labelName += ":" + @__debugEvents.prefix  if @__debugEvents.prefix
+          labelName += ":" + @__debugEvents.prefix if @__debugEvents.prefix
           console.debug "%c%s %c%s%c %s"
           , css.timestamp
           , new Date().toString().match(/(\d+:\d+:\d+)/)[1]
