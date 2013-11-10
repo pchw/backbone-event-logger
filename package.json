@@ -1,0 +1,35 @@
+{
+  "name": "backbone-event-logger",
+  "version": "0.0.1",
+  "main": "dist/backbone-event-logger.min.js",
+  "description": "The best module ever.",
+  "homepage": "https://github.com/pchw/backbone-event-logger",
+  "bugs": "https://github.com/pchw/backbone-event-logger/issues",
+  "author": {
+    "name": "pchw",
+    "email": "bump.luv@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pchw/backbone-event-logger"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "should": "~1.2.2",
+    "matchdep": "~0.1.2",
+    "mocha-cakes": "~0.9.0",
+    "grunt": "~0.4.1"
+  }
+}

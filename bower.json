@@ -1,0 +1,24 @@
+{
+  "name": "backbone-event-logger",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pchw/backbone-event-logger",
+  "authors": [
+    "pchw <bump.luv@gmail.com>"
+  ],
+  "description": "backbone event logger",
+  "main": "dist/backbone.event-logger.js",
+  "keywords": [
+    "backbone.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.0"
+  }
+}
